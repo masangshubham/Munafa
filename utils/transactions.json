@@ -1,0 +1,16 @@
+[
+    {
+       "id": 1,
+       "date": "2024-04-01",
+       "amount": 100,
+       "description": "Grocery Shopping"
+    },
+    {
+       "id": 2,
+       "date": "2024-04-02",
+       "amount": 50,
+       "description": "Coffee Shop"
+    },
+    // Add more transactions as needed
+   ]
+   

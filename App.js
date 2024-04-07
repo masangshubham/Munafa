@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import LoginScreen from "./components/LoginScreen"; // Adjust the path as necessary
+import HomeScreen from "./components/HomeScreen"; // Adjust the path as necessary
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import RegisterScreen from "./components/RegisterScreen"; // Adjust the path as necessary
+const Stack = createStackNavigator();
 
 export default function App() {
+  const [isSignedIn, setIsSignedIn] = useState(true);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{ headerShown: false }}
+          initialRouteName={isSignedIn ? "Home" : "Login"}
+        >
+          <Stack.Screen name="Login">
+            {(props) => (
+              <LoginScreen {...props} setIsSignedIn={setIsSignedIn} />
+            )}
+          </Stack.Screen>
+          <Stack.Screen name="Home">
+            {(props) => <HomeScreen {...props} setIsSignedIn={setIsSignedIn} />}
+          </Stack.Screen>
+          <Stack.Screen name="Register">
+            {(props) => <RegisterScreen {...props} />}
+          </Stack.Screen>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
