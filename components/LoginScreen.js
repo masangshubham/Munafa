@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({ navigation, setUserNameApp }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -29,6 +29,7 @@ const LoginScreen = ({ navigation }) => {
 
       const data = await response.json();
       console.log(data);
+      setUserNameApp(username);
       // On successful login, navigate to the home screen
       setErrorMessage("");
       navigation.navigate("Home");

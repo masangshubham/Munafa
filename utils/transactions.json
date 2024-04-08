@@ -1,16 +1,92 @@
 [
-    {
-       "id": 1,
-       "date": "2024-04-01",
-       "amount": 100,
-       "description": "Grocery Shopping"
-    },
-    {
-       "id": 2,
-       "date": "2024-04-02",
-       "amount": 50,
-       "description": "Coffee Shop"
-    },
-    // Add more transactions as needed
-   ]
-   
+  {
+    "id": 1,
+    "name": "John Doe",
+    "date": "2024-04-01",
+    "amount": 100
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "date": "2024-04-02",
+    "amount": 50
+  },
+  {
+    "id": 3,
+    "name": "Alice Johnson",
+    "date": "2024-04-03",
+    "amount": 200
+  },
+  {
+    "id": 4,
+    "name": "Bob Williams",
+    "date": "2024-04-04",
+    "amount": 150
+  },
+  {
+    "id": 5,
+    "name": "Charlie Brown",
+    "date": "2024-04-05",
+    "amount": 75
+  },
+  {
+    "id": 6,
+    "name": "Diana Prince",
+    "date": "2024-04-06",
+    "amount": 125
+  },
+  {
+    "id": 7,
+    "name": "Eve Adams",
+    "date": "2024-04-07",
+    "amount": 300
+  },
+  {
+    "id": 8,
+    "name": "Frank Miller",
+    "date": "2024-04-08",
+    "amount": 250
+  },
+  {
+    "id": 9,
+    "name": "Grace Lee",
+    "date": "2024-04-09",
+    "amount": 175
+  },
+  {
+    "id": 10,
+    "name": "Henry Ford",
+    "date": "2024-04-10",
+    "amount": 350
+  },
+  {
+    "id": 11,
+    "name": "Ivy King",
+    "date": "2024-04-11",
+    "amount": 225
+  },
+  {
+    "id": 12,
+    "name": "Jack Daniels",
+    "date": "2024-04-12",
+    "amount": 400
+  },
+  {
+    "id": 13,
+    "name": "Kate White",
+    "date": "2024-04-13",
+    "amount": 275
+  },
+  {
+    "id": 14,
+    "name": "Liam Miller",
+    "date": "2024-04-14",
+    "amount": 375
+  },
+  {
+    "id": 15,
+    "name": "Mia Brown",
+    "date": "2024-04-15",
+    "amount": 450
+  }
+]

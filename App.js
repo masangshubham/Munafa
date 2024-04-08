@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 
 export default function App() {
   const [isSignedIn, setIsSignedIn] = useState(true);
-
+  const [userNameApp, setUserNameApp] = useState("");
   return (
     <SafeAreaProvider>
       <NavigationContainer>
@@ -19,11 +19,11 @@ export default function App() {
         >
           <Stack.Screen name="Login">
             {(props) => (
-              <LoginScreen {...props} setIsSignedIn={setIsSignedIn} />
+              <LoginScreen {...props} setIsSignedIn={setIsSignedIn} setUserNameApp={setUserNameApp}/>
             )}
           </Stack.Screen>
           <Stack.Screen name="Home">
-            {(props) => <HomeScreen {...props} setIsSignedIn={setIsSignedIn} />}
+            {(props) => <HomeScreen {...props} setIsSignedIn={setIsSignedIn} userNameApp={userNameApp}/>}
           </Stack.Screen>
           <Stack.Screen name="Register">
             {(props) => <RegisterScreen {...props} />}

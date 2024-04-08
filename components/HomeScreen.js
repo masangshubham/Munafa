@@ -6,20 +6,25 @@ import { BottomNavigation } from "react-native-paper";
 import Home from "./Home";
 import ScanScreen from "./ScanScreen";
 import ProfileScreen from "./ProfileScreen";
+import AddCard from "./AddCard";
+import { useState } from "react";
 
 function HomeScreen({ setIsSignedIn }) {
   const navigation = useNavigation();
+  const [cardData, setCardData] = useState({});
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: "home", title: "Home", focusedIcon: "home", unfocusedIcon: "home-outline"},
     { key: "scan", title: "Scan", focusedIcon: "camera", unfocusedIcon: "camera-outline"},
     { key: "profile", title: "Profile", focusedIcon: "account", unfocusedIcon: "account-outline"},
+    {key: "addCard", title: "Add Card", focusedIcon: "credit-card", unfocusedIcon: "credit-card-outline"}
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    home: Home,
-    scan: ScanScreen,
-    profile: ProfileScreen,
+    home: () => <Home cardData={cardData} />,
+    scan: () => <ScanScreen setIsSignedIn={setIsSignedIn} />,
+    profile: () => <ProfileScreen setCardData={setCardData} />,
+    addCard: () => <AddCard />
   });
 
   const handleLogout = () => {
