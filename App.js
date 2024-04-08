@@ -5,9 +5,11 @@ import LoginScreen from "./components/LoginScreen"; // Adjust the path as necess
 import HomeScreen from "./components/HomeScreen"; // Adjust the path as necessary
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import RegisterScreen from "./components/RegisterScreen"; // Adjust the path as necessary
+import { LogBox } from "react-native";
 const Stack = createStackNavigator();
 
 export default function App() {
+  LogBox.ignoreAllLogs();
   const [isSignedIn, setIsSignedIn] = useState(true);
   const [userNameApp, setUserNameApp] = useState("");
   return (
